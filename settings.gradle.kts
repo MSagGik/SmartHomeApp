@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "SmartHomeApp"
 include(":app")
- 
+include(":common_ui")
