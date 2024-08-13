@@ -22,3 +22,7 @@ dependencyResolutionManagement {
 rootProject.name = "SmartHomeApp"
 include(":app")
 include(":common_ui")
+include(":data")
+include(":home")
+include(":profile")
+include(":settings")
