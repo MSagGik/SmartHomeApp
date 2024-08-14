@@ -5,4 +5,10 @@
     <string name="setting">Настройки</string>
     <string name="home">Дом</string>
     <string name="place_holder">Данная страница в разработке</string>
+    <string name="settings">Настройки</string>
+    <string name="device_smart_home">Устройства умного дома</string>
+    <string name="user_settings">Пользовательские настройки</string>
+    <string name="light_theme">Светлая тема</string>
+    <string name="dark_theme">Тёмная тема</string>
+    <string name="language">Язык</string>
 </resources>

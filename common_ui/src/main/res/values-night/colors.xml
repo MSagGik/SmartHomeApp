@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="background_base">#121212</color>
+    <color name="background_text_one">#252525</color>
+    <color name="background_icon">#84AEDC</color>
     <color name="text_base">#E0E0E0</color>
 
     <color name="primary_blue">#1E88E5</color>

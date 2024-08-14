@@ -45,6 +45,7 @@
     <dimen name="dimen_302">302dp</dimen>
     <dimen name="dimen_353">353dp</dimen>
     <dimen name="text_size_bottom_navigation_menu">10sp</dimen>
+    <dimen name="text_size_12s">12sp</dimen>
     <dimen name="text_size_14s">14sp</dimen>
     <dimen name="text_size_16s">16sp</dimen>
     <dimen name="text_size_20s">20sp</dimen>

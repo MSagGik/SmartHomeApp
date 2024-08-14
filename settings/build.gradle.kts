@@ -49,5 +49,8 @@ dependencies {
     implementation(libs.nav.ui)
     implementation(libs.nav.fragment)
 
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+
     implementation(project(":common_ui"))
 }

@@ -54,6 +54,7 @@ dependencies {
     implementation(libs.nav.ui)
     implementation(libs.nav.fragment)
 
+    implementation(project(":data"))
     implementation(project(":home"))
     implementation(project(":profile"))
     implementation(project(":settings"))

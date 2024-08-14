@@ -24,4 +24,38 @@
         <item name="android:gravity">center</item>
         <item name="android:layout_gravity">center</item>
     </style>
+
+    <style name="HeaderOne">
+        <item name="android:textSize">@dimen/text_size_22s</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/text_base</item>
+        <item name="android:textFontWeight">500</item>
+    </style>
+
+    <style name="HeaderTwo">
+        <item name="android:textSize">@dimen/text_size_16s</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/text_base</item>
+        <item name="android:textFontWeight">300</item>
+    </style>
+
+    <style name="HeaderTree">
+        <item name="android:textSize">@dimen/text_size_12s</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/text_base</item>
+        <item name="android:textFontWeight">100</item>
+    </style>
+
+    <style name="SwitchSettingTheme">
+        <item name="thumbTint">@color/grey_dark</item>
+        <item name="trackTint">@color/background_base</item>
+        <item name="android:checked">false</item>
+    </style>
+
 </resources>
