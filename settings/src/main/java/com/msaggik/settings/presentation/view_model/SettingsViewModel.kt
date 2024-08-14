@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.msaggik.settings.domain.model.LanguageApp
 import com.msaggik.settings.domain.model.ThemeApp
 import com.msaggik.settings.domain.use_case.SettingsInteractor
 import kotlinx.coroutines.Dispatchers
@@ -16,16 +17,20 @@ class SettingsViewModel (
 
     private val themeLiveData = MutableLiveData<Boolean>()
     private var isLightTheme = true
+    private val languageLiveData = MutableLiveData<String>()
+    private var language = ""
 
     init {
         viewModelScope.launch (Dispatchers.IO) {
             isLightTheme = settingsInteractor.getTheme().isLightTheme
-        }
-        setApplicationTheme(isLightTheme)
-        themeLiveData.postValue(isLightTheme)
-    }
+            themeLiveData.postValue(isLightTheme)
 
-    fun getTheme(): LiveData<Boolean> = themeLiveData
+            val languageApp = settingsInteractor.getLanguageSharedPreferences()
+            language = languageApp.language
+            settingsInteractor.setLanguage(languageApp)
+            languageLiveData.postValue(language)
+        }
+    }
 
     fun switchTheme(lightThemeEnabled: Boolean) {
         isLightTheme = lightThemeEnabled
@@ -44,5 +49,15 @@ class SettingsViewModel (
                 AppCompatDelegate.MODE_NIGHT_YES
             }
         )
+    }
+
+    fun getLanguage(): LiveData<String> = languageLiveData
+
+    fun setLanguage(languageEnabled: String) {
+        language = languageEnabled
+        viewModelScope.launch (Dispatchers.IO) {
+            settingsInteractor.setLanguage(LanguageApp(language))
+        }
+        languageLiveData.postValue(language)
     }
 }

@@ -18,7 +18,8 @@ val settingModule = module {
     // domain
     single<SettingsInteractor> {
         SettingsInteractorImpl(
-            repository = get()
+            repositoryTheme = get(),
+            repositoryLanguage = get()
         )
     }
 }

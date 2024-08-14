@@ -58,4 +58,11 @@
         <item name="android:checked">false</item>
     </style>
 
+    <style name="BaseLanguage">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textFontWeight">300</item>
+        <item name="android:textSize">@dimen/text_size_14s</item>
+        <item name="android:textColor">@color/text_base</item>
+    </style>
+
 </resources>

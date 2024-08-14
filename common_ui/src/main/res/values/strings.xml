@@ -11,4 +11,18 @@
     <string name="light_theme">Светлая тема</string>
     <string name="dark_theme">Тёмная тема</string>
     <string name="language">Язык</string>
+    <string name="english">Английский</string>
+    <string name="russian">Русский</string>
+    <string name="chinese">Китайский</string>
+    <string-array name="language_selection_values">
+        <item>en-US</item>
+        <item>ru</item>
+        <item>zh-CN</item>
+    </string-array>
+    <string-array name="language_selection">
+        <item>@string/english</item>
+        <item>@string/russian</item>
+        <item>@string/chinese</item>
+    </string-array>
+    <string name="default_">по умолчанию</string>
 </resources>

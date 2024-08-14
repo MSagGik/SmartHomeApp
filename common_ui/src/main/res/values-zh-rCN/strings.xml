@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SmartHomeApp</string>
+    <string name="profile">个人资料</string>
+    <string name="setting">设置</string>
+    <string name="home">房子</string>
+    <string name="place_holder">该页面正在建设中</string>
+    <string name="settings">设置</string>
+    <string name="device_smart_home">智能家居设备</string>
+    <string name="user_settings">自定义设置</string>
+    <string name="light_theme">浅色主题</string>
+    <string name="dark_theme">深色主题</string>
+    <string name="language">语言</string>
+    <string name="english">英语</string>
+    <string name="russian">俄语</string>
+    <string name="chinese">中国人</string>
+    <string name="default_">默认</string>
+</resources>

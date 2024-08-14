@@ -49,4 +49,5 @@ dependencies {
     implementation(project(":home"))
     implementation(project(":profile"))
     implementation(project(":settings"))
+    implementation(project(":common_ui"))
 }
