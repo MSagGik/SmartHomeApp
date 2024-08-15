@@ -50,4 +50,5 @@ dependencies {
     implementation(project(":profile"))
     implementation(project(":settings"))
     implementation(project(":common_ui"))
+    implementation(project(":common_util"))
 }

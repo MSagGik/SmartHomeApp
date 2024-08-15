@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.DevicesFragment">
+
+    <FrameLayout
+        android:id="@+id/frame_layout_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_text_one"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/button_back"
+            android:layout_width="@dimen/dimen_34"
+            android:layout_height="@dimen/dimen_34"
+            android:layout_margin="@dimen/dimen_16"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/header_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/HeaderOne"
+            android:layout_gravity="center"
+            android:text="@string/header_setting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/header_two"
+        style="@style/HeaderTree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/dimen_24"
+        android:layout_marginStart="@dimen/dimen_24"
+        android:text="@string/saved_devices"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame_layout_one" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_bluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dimen_5"
+        android:layout_marginBottom="20dp"
+        android:minHeight="350dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/search_device"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_two"
+        android:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/loading_time"
+        android:layout_width="@dimen/dimen_41"
+        android:layout_height="@dimen/dimen_41"
+        android:layout_gravity="center_horizontal"
+        android:indeterminateTint="@color/background_icon"
+        app:layout_constraintBottom_toTopOf="@+id/search_device"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame_layout_one"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/error_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/HeaderTwo"
+        android:textColor="@color/text_base"
+        android:text="@string/error_message"
+        app:layout_constraintBottom_toTopOf="@+id/search_device"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame_layout_one"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/empty_list_devices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/HeaderTwo"
+        android:textColor="@color/text_base"
+        android:text="@string/empty_list_devices"
+        app:layout_constraintBottom_toTopOf="@+id/search_device"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame_layout_one"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/search_device"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/button_background"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/search_devices"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="25dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

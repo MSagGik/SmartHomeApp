@@ -15,14 +15,39 @@
     <string name="russian">Русский</string>
     <string name="chinese">Китайский</string>
     <string-array name="language_selection_values">
-        <item>en-US</item>
         <item>ru</item>
+        <item>en-US</item>
         <item>zh-CN</item>
     </string-array>
     <string-array name="language_selection">
-        <item>@string/english</item>
         <item>@string/russian</item>
+        <item>@string/english</item>
         <item>@string/chinese</item>
     </string-array>
     <string name="default_">по умолчанию</string>
+    <string name="device_name">Название</string>
+    <string name="device_mac">MAC адрес</string>
+    <string name="menu_bluetooth">Bluetooth</string>
+    <string name="menu_list_devices">Список устройств</string>
+    <string name="menu_connect">Подключение</string>
+    <string name="lighting">Умный свет</string>
+    <string name="climate_parameter">Данные о температуре, влажности и давлении</string>
+    <string name="climate">Климат контроль</string>
+    <string name="connect_controller_on">Подключиться</string>
+    <string name="connect_controller_off">Отключиться</string>
+    <string name="bluetooth_on">Включить bluetooth</string>
+    <string name="bluetooth_off">Выключить bluetooth</string>
+    <string name="lighting_header">Умное освещение</string>
+    <string name="color">Цвет</string>
+    <string name="header_setting">Устройства умного дома</string>
+    <string name="on_permission">"Данны разрешения на работу с bluetooth"</string>
+    <string name="off_permission">"Разрешения работы с bluetooth отсутствуют"</string>
+    <string name="no_check_bluetooth">Bluetooth выключен</string>
+    <string name="no_permission">Отсутствуют разрешения на использование Bluetooth</string>
+    <string name="error_message">ошибка</string>
+    <string name="empty_list_devices">Устройства Bluetooth отсутствуют</string>
+    <string name="saved_devices">Сохранённые устройства</string>
+    <string name="search_devices">Поиск устройств</string>
+    <string name="found_devices">Найденные устройства</string>
+    <string name="no_devices_found">Устройств не найдено</string>
 </resources>

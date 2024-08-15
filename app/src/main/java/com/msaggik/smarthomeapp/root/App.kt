@@ -1,12 +1,11 @@
 package com.msaggik.smarthomeapp.root
 
 import android.app.Application
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.os.LocaleListCompat
 import com.msaggik.data.di.settingDataModule
 import com.msaggik.settings.di.settingModule
 import com.msaggik.settings.domain.use_case.SettingsInteractor
+import com.msaggik.common_ui.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
@@ -41,7 +40,9 @@ class App : Application(), KoinComponent {
                 }
             )
             val language = settingsInteractor.getLanguageSharedPreferences()
-            settingsInteractor.setLanguageApplication(language)
+            if(language.language != getString(R.string.default_)) {
+                settingsInteractor.setLanguageApplication(language)
+            }
         }
     }
 }

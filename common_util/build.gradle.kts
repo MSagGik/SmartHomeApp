@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.msaggik.settings"
+    namespace = "com.msaggik.common_util"
     compileSdk = 34
 
     defaultConfig {
@@ -30,9 +30,6 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures {
-        viewBinding = true
-    }
 }
 
 dependencies {
@@ -43,15 +40,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
-    implementation(libs.koin)
-    implementation(libs.androidx.fragment.ktx)
-    implementation(libs.nav.ui)
-    implementation(libs.nav.fragment)
-
-    implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
-
-    implementation(project(":common_ui"))
-    implementation(project(":common_util"))
 }

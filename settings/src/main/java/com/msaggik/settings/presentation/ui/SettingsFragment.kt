@@ -1,7 +1,6 @@
 package com.msaggik.settings.presentation.ui
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
 import com.msaggik.common_ui.R
 import com.msaggik.settings.databinding.FragmentSettingsBinding
 import com.msaggik.settings.presentation.ui.adapters.LanguageAdapter
@@ -79,6 +79,18 @@ class SettingsFragment : Fragment() {
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
+            }
+        }
+
+        binding.deviceSmartHome.setOnClickListener(listener)
+    }
+
+    private val listener: View.OnClickListener = object : View.OnClickListener {
+        override fun onClick(p0: View?) {
+            when (p0?.id) {
+                com.msaggik.settings.R.id.device_smart_home -> {
+                    findNavController().navigate(com.msaggik.settings.R.id.action_settingsFragment_to_devicesFragment)
+                }
             }
         }
     }

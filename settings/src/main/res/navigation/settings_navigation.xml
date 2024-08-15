@@ -9,6 +9,16 @@
         android:id="@+id/settingsFragment"
         android:name="com.msaggik.settings.presentation.ui.SettingsFragment"
         android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_devicesFragment"
+            app:destination="@id/devicesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/devicesFragment"
+        android:name="com.msaggik.settings.presentation.ui.DevicesFragment"
+        android:label="fragment_devices"
+        tools:layout="@layout/fragment_devices" />
 
 </navigation>

@@ -24,10 +24,10 @@ class SettingsViewModel (
         viewModelScope.launch (Dispatchers.IO) {
             isLightTheme = settingsInteractor.getTheme().isLightTheme
             themeLiveData.postValue(isLightTheme)
-
+        }
+        viewModelScope.launch (Dispatchers.IO) {
             val languageApp = settingsInteractor.getLanguageSharedPreferences()
             language = languageApp.language
-            settingsInteractor.setLanguage(languageApp)
             languageLiveData.postValue(language)
         }
     }
