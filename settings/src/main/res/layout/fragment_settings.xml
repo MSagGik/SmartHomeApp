@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.SettingsFragment">
+
+    <TextView
+        android:id="@+id/header_one"
+        style="@style/HeaderOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_24"
+        android:text="@string/settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/device_smart_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_text_one"
+        android:outlineAmbientShadowColor="@color/shadow_base"
+        android:outlineSpotShadowColor="@color/shadow_base"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/dimen_24"
+        app:layout_constraintTop_toBottomOf="@+id/header_one">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_32"
+            android:layout_height="@dimen/dimen_32"
+            android:layout_marginStart="@dimen/dimen_24"
+            android:layout_marginVertical="@dimen/dimen_18"
+            android:src="@drawable/ic_smart_home_device" />
+
+        <TextView
+            style="@style/HeaderTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_70"
+            android:layout_gravity="center_vertical"
+            android:text="@string/device_smart_home" />
+
+        <ImageView
+            android:layout_width="@dimen/dimen_32"
+            android:layout_height="@dimen/dimen_32"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="@dimen/dimen_24"
+            android:layout_marginVertical="@dimen/dimen_18"
+            android:src="@drawable/ic_go_to" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/header_two"
+        style="@style/HeaderTree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/user_settings"
+        android:layout_marginTop="@dimen/dimen_24"
+        android:layout_marginStart="@dimen/dimen_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/device_smart_home" />
+
+    <FrameLayout
+        android:id="@+id/user_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_text_one"
+        android:outlineAmbientShadowColor="@color/shadow_base"
+        android:outlineSpotShadowColor="@color/shadow_base"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/dimen_5"
+        app:layout_constraintTop_toBottomOf="@+id/header_two">
+
+        <ImageView
+            android:id="@+id/image_theme"
+            android:layout_width="@dimen/dimen_32"
+            android:layout_height="@dimen/dimen_32"
+            android:layout_marginTop="@dimen/dimen_18"
+            android:layout_marginStart="@dimen/dimen_24"
+            android:src="@drawable/ic_theme" />
+
+        <TextView
+            android:id="@+id/text_theme"
+            style="@style/HeaderTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:layout_marginStart="@dimen/dimen_70"
+            android:text="@string/light_theme" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="14dp"
+            android:padding="@dimen/dimen_9"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/dimen_10"
+            android:layout_marginEnd="@dimen/dimen_6"
+            style="@style/SwitchSettingTheme" />
+
+        <ImageView
+            android:layout_width="@dimen/dimen_32"
+            android:layout_height="@dimen/dimen_32"
+            android:layout_marginTop="@dimen/dimen_68"
+            android:layout_marginStart="26dp"
+            android:layout_marginBottom="@dimen/dimen_18"
+            android:src="@drawable/ic_language" />
+
+        <TextView
+            style="@style/HeaderTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="73dp"
+            android:layout_marginStart="@dimen/dimen_70"
+            android:text="@string/language" />
+
+        <Spinner
+            android:id="@+id/language_selection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/dimen_6"
+            android:layout_marginTop="58dp"/>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

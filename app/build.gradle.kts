@@ -33,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -45,4 +48,15 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(libs.koin)
+    implementation(libs.androidx.fragment.ktx)
+    implementation(libs.nav.ui)
+    implementation(libs.nav.fragment)
+
+    implementation(project(":data"))
+    implementation(project(":home"))
+    implementation(project(":profile"))
+    implementation(project(":settings"))
+    implementation(project(":common_ui"))
 }
