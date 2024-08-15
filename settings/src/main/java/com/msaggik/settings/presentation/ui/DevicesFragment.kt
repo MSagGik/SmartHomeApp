@@ -71,6 +71,8 @@ class DevicesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        intentFilter()
+
         binding.listBluetooth.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         binding.listBluetooth.adapter = deviceAdapter
@@ -123,7 +125,6 @@ class DevicesFragment : Fragment() {
                         bluetoothAdapter.startDiscovery()
                     } catch (e: SecurityException) {
                     }
-                    intentFilter()
                 }
             }
         }
@@ -180,6 +181,11 @@ class DevicesFragment : Fragment() {
         _binding = null
         viewArray = emptyArray()
         viewArray = null
+        deviceList.clear()
+        try {
+            bluetoothAdapter.cancelDiscovery()
+        } catch (e: SecurityException) {
+        }
     }
 
     override fun onDestroy() {
