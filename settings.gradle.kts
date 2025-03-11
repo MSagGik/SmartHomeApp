@@ -21,3 +21,11 @@ dependencyResolutionManagement {
 
 rootProject.name = "SmartHomeApp"
 include(":app")
+include(":data-sp")
+include(":common-ui")
+include(":common-util")
+include(":data-bluetooth")
+include(":data-db")
+include(":home")
+include(":profile")
+include(":settings")

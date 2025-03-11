@@ -1,14 +1,33 @@
 [versions]
-agp = "8.8.1"
+minSdk = "26"
+compileSdk = "35"
+targetSdk = "33"
+versionCode = "1"
+versionName = "1.0"
+jvmTarget = "11"
+
+agp = "8.8.2"
 kotlin = "1.9.24"
-coreKtx = "1.16.0"
+coreKtx = "1.15.0"
+
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
-appcompat = "1.7.1"
+appcompat = "1.7.0"
 material = "1.12.0"
 activity = "1.10.1"
 constraintlayout = "2.2.1"
+glide = "4.14.2"
+flexbox = "3.0.0"
+paletteKtx = "1.0.0"
+
+fragmentKtx = "1.8.6"
+jetpackNavigation = "2.8.9"
+koin = "3.5.6"
+kotlinxCoroutinesAndroid = "1.8.1"
+lifecycleViewmodelKtx = "2.8.7"
+viewpager = "1.1.0"
+roomRuntime = "2.6.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -19,8 +38,22 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragmentKtx" }
+nav-fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "jetpackNavigation" }
+nav-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "jetpackNavigation" }
+koin = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesAndroid" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+flexbox = { module = "com.google.android.flexbox:flexbox", version.ref = "flexbox" }
+androidx-palette-ktx = { module = "androidx.palette:palette-ktx", version.ref = "paletteKtx" }
+androidx-viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "viewpager" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomRuntime" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
