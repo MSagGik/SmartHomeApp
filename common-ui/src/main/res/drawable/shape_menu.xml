@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="#25000000"/>
+            <corners android:radius="@dimen/dimen_32"/>
+            <padding
+                android:bottom="2dp"
+                android:left="1dp"
+                android:right="1dp"/>
+        </shape>
+    </item>
+
+    <!-- Основная форма -->
+    <item>
+        <shape>
+            <solid android:color="@color/app_color_surface"/>
+            <corners android:radius="@dimen/dimen_32"/>
+        </shape>
+    </item>
+</layer-list>

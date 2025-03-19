@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Умный дом</string>
+    <string name="profile">Профиль</string>
+    <string name="setting">Настройки</string>
+    <string name="home">Дом</string>
+    <string name="place_holder">Данная страница в разработке</string>
+    <string name="settings">Настройки</string>
+    <string name="device_smart_home">Устройства умного дома</string>
+    <string name="user_settings">Пользовательские настройки</string>
+    <string name="light_theme">Светлая тема</string>
+    <string name="dark_theme">Тёмная тема</string>
+    <string name="language">Язык</string>
+    <string name="english">Английский</string>
+    <string name="russian">Русский</string>
+    <string name="chinese">Китайский</string>
+    <string-array name="language_selection_values">
+        <item>ru</item>
+        <item>en-US</item>
+        <item>zh-CN</item>
+    </string-array>
+    <string-array name="language_selection">
+        <item>@string/russian</item>
+        <item>@string/english</item>
+        <item>@string/chinese</item>
+    </string-array>
+    <string name="default_">по умолчанию</string>
+    <string name="name_default">Название</string>
+    <string name="device_mac">MAC адрес</string>
+    <string name="menu_bluetooth">Bluetooth</string>
+    <string name="menu_list_devices">Список устройств</string>
+    <string name="menu_connect">Подключение</string>
+    <string name="lighting">Умный свет</string>
+    <string name="climate_parameter">Данные о температуре, влажности и давлении</string>
+    <string name="climate">Климат контроль</string>
+    <string name="connect_controller_on">Подключиться</string>
+    <string name="connect_controller_off">Отключиться</string>
+    <string name="bluetooth_on">Включить bluetooth</string>
+    <string name="bluetooth_off">Выключить bluetooth</string>
+    <string name="lighting_header">Умное освещение</string>
+    <string name="color">Цвет</string>
+    <string name="header_setting">Устройства умного дома</string>
+    <string name="on_permission">"Данны разрешения на работу с bluetooth"</string>
+    <string name="off_permission">"Разрешения работы с bluetooth отсутствуют"</string>
+    <string name="no_check_bluetooth">Bluetooth выключен</string>
+    <string name="no_permission">Отсутствуют разрешения на использование Bluetooth</string>
+    <string name="error_message">ошибка</string>
+    <string name="empty_list_devices">Устройства Bluetooth отсутствуют</string>
+    <string name="saved_devices">Сохранённые устройства</string>
+    <string name="search_devices">Поиск устройств</string>
+    <string name="found_devices">Найденные устройства</string>
+    <string name="no_devices_found">Устройств не найдено</string>
+    <string name="error_sending_data">Ошибка отправки данных</string>
+    <string name="error_retrieving_data">Ошибка получения данных:</string>
+    <string name="error_connection">Ошибка подключения</string>
+    <string name="succes_connected">Успешное соединение</string>
+    <string name="flow_connected_device_calcel">Поток connectedDevice отменён</string>
+    <string name="climate_header_fragment">Климат</string>
+    <string name="lighting_header_fragment">Освещение</string>
+    <string name="permission_to_use_camera_not_granted">Разрешение на использование камеры не предоставлено</string>
+    <string name="edit_room">Редактирование комнаты</string>
+    <string name="edit">Редактировать</string>
+    <string name="tv_header_fragment">Телевидение</string>
+    <string name="auto_header_fragment">Автомобиль</string>
+    <string name="universal_header_fragment">Универсальное</string>
+    <string name="smart_home">Умный дом</string>
+    <string name="empty_rooms">Комнаты отсутствуют</string>
+    <string name="header_room_home">Комната</string>
+    <string name="header_climate">Климат контроль</string>
+    <string name="sensor_temperature_header">Температура</string>
+    <string name="sensor_humidity_header">Влажность</string>
+    <string name="sensor_pressure_header">Давление</string>
+    <string name="sensor_pressure_placeholder">- мм.рт.ст.</string>
+    <string name="sensor_pressure">%1$.1f мм.рт.ст.</string>
+    <string name="add_room">Добавить комнату</string>
+    <string name="new_room">Новая комната</string>
+    <string name="name_room_home">Название помещения*</string>
+    <string name="description_default">Описание</string>
+    <string name="create">Создать</string>
+    <string name="add_device">Добавить устройство</string>
+    <string name="add_image">Выберите изображение</string>
+    <string name="photo">Сделать фото</string>
+    <string name="gallery">Из галереи</string>
+    <string name="confirm_exit">Подтвердите выход</string>
+    <string name="confirm_exit_description_room">Все введённые данные будут потеряны. Вы уверены, что хотите выйти?</string>
+    <string name="finish">Завершить</string>
+    <string name="cancel">Отмена</string>
+    <string name="functions_device">Функции устройства</string>
+    <string name="device_universal_smart">Другое</string>
+    <string name="device_temperature">Термометр</string>
+    <string name="device_humidity">Влажность воздуха</string>
+    <string name="device_pressure">Барометр</string>
+    <string name="device_kitchen">Умная кухня</string>
+    <string name="device_tv">Смарт ТВ</string>
+    <string name="device_auto">Автомобиль</string>
+    <string name="add">Добавить</string>
+    <string name="added_devices">Добавленные устройства:</string>
+    <string name="exit">Выйти</string>
+    <string name="confirm_delete">Подтвердите удаление</string>
+    <string name="confirm_delete_room_home">Вы уверены что хотите удалить данные выбранной комнаты?</string>
+    <string name="edit_default">Редактировать</string>
+    <string name="delete_default">Удалить</string>
+    <string name="default_hyphen">-</string>
+    <string name="searched_devices">Найденные устройства</string>
+    <string name="empty_connect_device">Отсутствует соединение с устройством</string>
+    <string name="connect_device">Подключить</string>
+    <string name="edit_lighting_mode">Редактирование композиции</string>
+    <string name="confirm_delete_lighting_mode">Вы уверены, что хотите удалить данную композицию света?</string>
+    <string name="mono">Моно</string>
+    <string name="on">Вкл</string>
+    <string name="off">Выкл</string>
+    <string name="high">Выс</string>
+    <string name="low">Низ</string>
+    <string name="lighting_mod_header">Варианты композиций</string>
+    <string name="lighting_new_mode">Новая</string>
+    <string name="new_lighting_mode">Новая композиция</string>
+    <string name="empty_list_colors">Цвета отсутствуют</string>
+    <string name="empty_lighting_list">Композиции отсутствуют</string>
+    <string name="header_lighting_mono">Палитра моно композиции</string>
+    <string name="choose">Выбрать</string>
+    <string name="header_color">Цвет</string>
+</resources>

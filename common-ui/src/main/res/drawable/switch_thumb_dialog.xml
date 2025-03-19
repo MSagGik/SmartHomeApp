@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:state_checked="true">
+    <shape
+        android:shape="oval">
+        <size android:width="@dimen/dimen_20" android:height="@dimen/dimen_20" />
+        <solid android:color="@color/app_color_onSecondary" />
+        <stroke android:width="@dimen/dimen_3" android:color="@color/app_color_primary"/>
+    </shape>
+</item>
+<item android:state_checked="false">
+    <shape
+        android:shape="oval">
+        <size android:width="@dimen/dimen_20" android:height="@dimen/dimen_20" />
+        <solid android:color="@color/app_color_onSecondary" />
+        <stroke android:width="@dimen/dimen_3" android:color="@color/app_color_onSurfaceVariant"/>
+    </shape>
+</item>
+</selector>
