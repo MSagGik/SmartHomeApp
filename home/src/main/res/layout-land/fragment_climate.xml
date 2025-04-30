@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_color_background"
+    tools:context="io.github.msaggik.home.presentation.ui.pager_fragments.ClimateFragment">
+
+    <TextView
+        android:id="@+id/name_device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_hyphen"
+        android:layout_marginEnd="@dimen/dimen_50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/geologica_auto_regular"
+        android:textColor="@color/app_color_onSurface"
+        android:textSize="@dimen/text_size_22s"/>
+
+    <LinearLayout
+        android:id="@+id/empty_state_climate_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/dimen_34"
+        android:layout_marginTop="@dimen/dimen_34"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_device">
+
+        <TextView
+            android:id="@+id/header_empty_connect_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/geologica_auto_regular"
+            android:gravity="center"
+            android:text="@string/empty_connect_device"
+            android:textColor="@color/app_color_onSurfaceVariant"
+            android:textSize="@dimen/text_size_18s"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/connect_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/dimen_10"
+            android:paddingHorizontal="@dimen/dimen_30"
+            android:backgroundTint="@color/app_color_primary"
+            android:fontFamily="@font/geologica_auto_medium"
+            android:textColor="@color/app_color_onPrimary"
+            android:textSize="@dimen/text_size_16s"
+            app:cornerRadius="@dimen/dimen_16"
+            android:textAllCaps="false"
+            android:text="@string/connect_device"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="25dp" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/data_state_climate_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/header_climate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/geologica_auto_regular"
+            android:text="@string/header_climate"
+            android:layout_marginStart="@dimen/dimen_12"
+            android:textColor="@color/app_color_onSurfaceVariant"
+            android:textSize="@dimen/text_size_18s"
+            app:layout_constraintStart_toStartOf="@+id/guideline_vertical_a"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.08" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.28" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.53" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical_e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.97" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_24"
+            android:layout_marginHorizontal="@dimen/dimen_12"
+            android:background="@drawable/shape_card"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_16"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_c"
+            app:layout_constraintStart_toStartOf="@+id/guideline_vertical_a"
+            app:layout_constraintTop_toBottomOf="@+id/header_climate">
+
+            <TextView
+                android:id="@+id/sensor_temperature_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/geologica_auto_regular"
+                android:text="@string/sensor_temperature_header"
+                android:textColor="@color/app_color_onSurfaceVariant"
+                android:textFontWeight="250"
+                android:textSize="@dimen/text_size_16s" />
+
+            <TextView
+                android:id="@+id/sensor_temperature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/geologica_auto_medium"
+                android:text="@string/sensor_temperature_placeholder"
+                android:textColor="@color/app_color_onBackground"
+                android:textFontWeight="500"
+                android:textSize="@dimen/text_size_32s" />
+
+            <ImageView
+                android:id="@+id/image_temperature"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_gravity="center"
+                android:layout_marginVertical="@dimen/dimen_9"
+                android:src="@drawable/ic_device_temp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/shape_card"
+            android:layout_marginTop="@dimen/dimen_24"
+            android:layout_marginHorizontal="@dimen/dimen_12"
+            android:padding="@dimen/dimen_16"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_d"
+            app:layout_constraintStart_toEndOf="@+id/guideline_vertical_c"
+            app:layout_constraintTop_toBottomOf="@+id/header_climate">
+
+            <TextView
+                android:id="@+id/sensor_humidity_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_16s"
+                android:fontFamily="@font/geologica_auto_regular"
+                android:textFontWeight="250"
+                android:textColor="@color/app_color_onSurfaceVariant"
+                android:text="@string/sensor_humidity_header" />
+
+            <TextView
+                android:id="@+id/sensor_humidity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_32s"
+                android:fontFamily="@font/geologica_auto_medium"
+                android:textFontWeight="500"
+                android:textColor="@color/app_color_onBackground"
+                android:text="@string/sensor_humidity_placeholder" />
+
+            <ImageView
+                android:id="@+id/image_humidity"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_marginVertical="@dimen/dimen_9"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_device_humidity" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_12"
+            android:layout_marginTop="@dimen/dimen_24"
+            android:background="@drawable/shape_card"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_16"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_e"
+            app:layout_constraintStart_toStartOf="@+id/guideline_vertical_d"
+            app:layout_constraintTop_toBottomOf="@+id/header_climate">
+
+            <TextView
+                android:id="@+id/sensor_pressure_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/geologica_auto_regular"
+                android:text="@string/sensor_pressure_header"
+                android:textColor="@color/app_color_onSurfaceVariant"
+                android:textFontWeight="250"
+                android:textSize="@dimen/text_size_16s" />
+
+            <TextView
+                android:id="@+id/sensor_pressure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/geologica_auto_medium"
+                android:text="@string/sensor_pressure_placeholder"
+                android:textColor="@color/app_color_onBackground"
+                android:textFontWeight="500"
+                android:textSize="@dimen/text_size_32s" />
+
+            <ImageView
+                android:id="@+id/image_pressure"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_gravity="center"
+                android:layout_marginVertical="@dimen/dimen_9"
+                android:src="@drawable/ic_device_pressure" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_color_background"
+    tools:context="io.github.msaggik.home.presentation.ui.pager_fragments.LightingFragment">
+
+    <TextView
+        android:id="@+id/name_device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_hyphen"
+        android:layout_marginTop="@dimen/dimen_50"
+        android:layout_marginStart="@dimen/dimen_34"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/geologica_auto_regular"
+        android:textColor="@color/app_color_onSurface"
+        android:textSize="@dimen/text_size_22s"/>
+
+    <LinearLayout
+        android:id="@+id/empty_state_climate_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/dimen_34"
+        android:layout_marginTop="@dimen/dimen_50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_device">
+
+        <TextView
+            android:id="@+id/header_empty_connect_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/geologica_auto_regular"
+            android:gravity="center"
+            android:text="@string/empty_connect_device"
+            android:textColor="@color/app_color_onSurfaceVariant"
+            android:textSize="@dimen/text_size_18s"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/connect_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/dimen_10"
+            android:paddingHorizontal="@dimen/dimen_30"
+            android:backgroundTint="@color/app_color_primary"
+            android:fontFamily="@font/geologica_auto_medium"
+            android:textColor="@color/app_color_onPrimary"
+            android:textSize="@dimen/text_size_16s"
+            app:cornerRadius="@dimen/dimen_16"
+            android:textAllCaps="false"
+            android:text="@string/connect_device"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="25dp" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/data_state_lighting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/view_lamp"
+            android:layout_width="239dp"
+            android:layout_height="454dp"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_34"
+            android:src="@drawable/view_lamp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/view_lighting"
+            android:layout_width="239dp"
+            android:layout_height="454dp"
+            android:layout_marginStart="@dimen/dimen_16"
+            android:layout_marginTop="@dimen/dimen_34"
+            android:src="@drawable/view_lighting"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_switch_lighting"
+            style="@style/HeaderOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/on"
+            app:layout_constraintEnd_toEndOf="@+id/switch_lighting"
+            app:layout_constraintStart_toStartOf="@+id/switch_lighting"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Switch
+            android:id="@+id/switch_lighting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/dimen_5"
+            android:gravity="center"
+            android:padding="@dimen/dimen_9"
+            android:paddingHorizontal="@dimen/dimen_10"
+            android:stateListAnimator="@animator/switch_state_animator"
+            android:thumb="@drawable/switch_thumb_lighting"
+            android:track="@drawable/switch_track_lighting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_switch_lighting"
+            app:thumbIconSize="@dimen/dimen_30"
+            app:thumbTint="@color/switch_thumb_selector"
+            app:trackTint="@color/switch_track_selector"
+            android:checked="false"
+            app:useMaterialThemeColors="false"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <TextView
+            android:id="@+id/header_seekBar_lighting_high"
+            style="@style/HeaderOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:text="@string/high"
+            app:layout_constraintEnd_toEndOf="@+id/switch_lighting"
+            app:layout_constraintStart_toStartOf="@+id/switch_lighting"
+            app:layout_constraintTop_toBottomOf="@+id/switch_lighting" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seek_bar_lighting"
+            android:layout_width="340dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:max="255"
+            android:min="0"
+            android:progress="0"
+            android:progressDrawable="@drawable/seekbar_track_lighting"
+            android:rotation="270"
+            android:splitTrack="false"
+            android:stateListAnimator="@animator/switch_state_animator"
+            android:thumb="@drawable/seekbar_thumb_lighting"
+            android:thumbOffset="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/view_lamp"
+            app:layout_constraintEnd_toEndOf="@+id/switch_lighting"
+            app:layout_constraintStart_toStartOf="@+id/switch_lighting"
+            app:layout_constraintTop_toBottomOf="@+id/header_seekBar_lighting_high"
+            tools:ignore="SpeakableTextPresent" />
+
+        <TextView
+            android:id="@+id/value_lighting"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:fontFamily="@font/geologica_auto_regular"
+            android:textColor="@color/app_color_onBackground"
+            android:textFontWeight="300"
+            android:textSize="@dimen/text_size_18s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_hyphen"
+            app:layout_constraintBottom_toBottomOf="@+id/seek_bar_lighting"
+            app:layout_constraintEnd_toStartOf="@+id/button_menu_lighting_main"
+            app:layout_constraintTop_toTopOf="@+id/seek_bar_lighting" />
+
+        <TextView
+            android:id="@+id/header_seekBar_lighting_low"
+            style="@style/HeaderOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/low"
+            app:layout_constraintEnd_toEndOf="@+id/switch_lighting"
+            app:layout_constraintStart_toStartOf="@+id/switch_lighting"
+            app:layout_constraintTop_toBottomOf="@+id/seek_bar_lighting" />
+
+        <ImageView
+            android:id="@+id/button_menu_lighting_main"
+            android:layout_width="@dimen/dimen_73"
+            android:layout_height="@dimen/dimen_73"
+            android:layout_marginTop="@dimen/dimen_12"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:foreground="@drawable/button_round_transparent"
+            android:padding="@dimen/dimen_16"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_menu_lighting_main"
+            android:theme="@style/ButtonThemeOverlay"
+            app:layout_constraintEnd_toEndOf="@+id/header_seekBar_lighting_low"
+            app:layout_constraintStart_toStartOf="@+id/header_seekBar_lighting_low"
+            app:layout_constraintTop_toBottomOf="@+id/header_seekBar_lighting_low" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

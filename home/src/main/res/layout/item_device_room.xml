@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_state_item_device"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingHorizontal="@dimen/dimen_10"
+    android:paddingVertical="@dimen/dimen_16"
+    android:layout_marginBottom="@dimen/dimen_16"
+    android:id="@+id/item_device_room">
+
+    <ImageView
+        android:id="@+id/image_type_device"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:contentDescription="@string/default_hyphen"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="@dimen/dimen_10"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_unknown_device" />
+
+    <TextView
+        android:id="@+id/name_device"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_18"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:fontFamily="@font/geologica_auto_medium"
+        android:hint="@string/name_default"
+        android:textColor="@color/app_color_onBackground"
+        android:textColorHint="@color/app_color_onBackground"
+        android:textFontWeight="300"
+        android:textSize="@dimen/text_size_16s"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_a"
+        app:layout_constraintStart_toEndOf="@+id/image_type_device"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.44" />
+
+    <TextView
+        android:id="@+id/mac_device"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_18"
+        android:ellipsize="end"
+        android:fontFamily="@font/geologica_auto_medium"
+        android:hint="@string/device_mac"
+        android:maxLines="1"
+        android:textColor="@color/app_color_onBackground"
+        android:textColorHint="@color/app_color_onBackground"
+        android:textFontWeight="300"
+        android:textSize="@dimen/text_size_16s"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_a"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

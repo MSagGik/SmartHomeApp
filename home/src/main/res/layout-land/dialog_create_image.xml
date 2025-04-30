@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dimen_24"
+    android:paddingHorizontal="@dimen/dimen_34"
+    android:paddingBottom="@dimen/dimen_41"
+    android:background="@drawable/shape_card">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/geologica_auto_medium"
+        android:textColor="@color/app_color_onSurface"
+        android:textSize="@dimen/text_size_18s"
+        android:layout_gravity="center_vertical"
+        android:text="@string/add_image"
+        android:layout_marginHorizontal="@dimen/dimen_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <LinearLayout
+        android:id="@+id/photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_24"
+        android:layout_marginEnd="@dimen/dimen_16"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <ImageView
+            android:id="@+id/image_photo"
+            android:layout_width="@dimen/dimen_88"
+            android:layout_height="@dimen/dimen_88"
+            app:srcCompat="@drawable/ic_photo_create" />
+
+        <TextView
+            android:id="@+id/text_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/geologica_auto_regular"
+            android:text="@string/photo"
+            android:textColor="@color/app_color_onSurface"
+            android:textSize="@dimen/text_size_16s" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_24"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <ImageView
+            android:id="@+id/image_gallery"
+            android:layout_width="@dimen/dimen_88"
+            android:layout_height="@dimen/dimen_88"
+            app:srcCompat="@drawable/ic_photo_select" />
+
+        <TextView
+            android:id="@+id/text_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/geologica_auto_regular"
+            android:gravity="center"
+            android:text="@string/gallery"
+            android:textColor="@color/app_color_onSurface"
+            android:textSize="@dimen/text_size_16s" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

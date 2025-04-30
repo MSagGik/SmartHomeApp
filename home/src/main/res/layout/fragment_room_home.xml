@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="io.github.msaggik.home.presentation.ui.RoomHomeFragment">
+
+    <View
+        android:id="@+id/foreground_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00FFFFFF" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/base_layout_room_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_room_home"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/placeholder_color" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.23" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/button_back"
+                android:layout_width="@dimen/dimen_58"
+                android:layout_height="@dimen/dimen_51"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:background="@drawable/shape_menu_item"
+                android:clickable="true"
+                android:foreground="@drawable/button_round_transparent"
+                android:paddingVertical="@dimen/dimen_8"
+                android:paddingStart="@dimen/dimen_5"
+                android:paddingEnd="@dimen/dimen_10"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_back"
+                android:theme="@style/ButtonThemeOverlay"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/app_color_onSurfaceFixed" />
+
+            <LinearLayout
+                android:id="@+id/header_and_button_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:layout_marginEnd="@dimen/dimen_5"
+                android:background="@drawable/shape_menu_item"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/dimen_5"
+                android:paddingStart="@dimen/dimen_18"
+                android:paddingEnd="@dimen/dimen_5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/header_room_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/geologica_auto_medium"
+                    android:paddingBottom="@dimen/dimen_3"
+                    android:text="@string/header_room_home"
+                    android:textColor="@color/app_color_onSurfaceFixed"
+                    android:textFontWeight="500"
+                    android:textSize="@dimen/text_size_22s" />
+
+                <ImageView
+                    android:id="@+id/button_menu"
+                    android:layout_width="@dimen/dimen_48"
+                    android:layout_height="@dimen/dimen_41"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:foreground="@drawable/button_round_transparent"
+                    android:paddingVertical="@dimen/dimen_3"
+                    android:paddingStart="@dimen/dimen_10"
+                    android:paddingEnd="@dimen/dimen_3"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_menu"
+                    android:theme="@style/ButtonThemeOverlay"
+                    app:tint="@color/app_color_onSurfaceFixed" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/room_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline_horizontal"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/room_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_5"
+            android:background="@drawable/shape_menu"
+            android:paddingHorizontal="@dimen/dimen_10"
+            android:paddingBottom="@dimen/dimen_10"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline_horizontal"
+            app:tabGravity="start"
+            app:tabIndicator="@drawable/shape_tab_indicator"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabIndicatorColor="@color/app_color_onBackground"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorHeight="@dimen/dimen_3"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/app_color_onBackground"
+            app:tabTextAppearance="@style/RoomTabLayoutHeader"
+            app:tabTextColor="@color/app_color_onSurfaceVariant" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_sheet_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_bottom_sheet_menu"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="550dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <ImageView
+            android:id="@+id/image_room_home_menu"
+            android:layout_width="@dimen/dimen_70"
+            android:layout_height="@dimen/dimen_70"
+            android:layout_marginTop="@dimen/dimen_48"
+            android:layout_marginStart="@dimen/dimen_41"
+            android:background="@drawable/shape_image_room_home_circle"
+            android:contentDescription="@string/default_hyphen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_placeholder_room" />
+
+        <TextView
+            android:id="@+id/name_room_home_menu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_24"
+            android:layout_marginEnd="@dimen/dimen_32"
+            android:ellipsize="end"
+            android:fontFamily="@font/geologica_auto_medium"
+            android:maxLines="1"
+            android:text="@string/default_hyphen"
+            android:textColor="@color/app_color_onSurface"
+            android:textSize="@dimen/text_size_20s"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/image_room_home_menu"
+            app:layout_constraintTop_toTopOf="@+id/image_room_home_menu" />
+
+        <TextView
+            android:id="@+id/description_room_home_menu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_24"
+            android:layout_marginEnd="@dimen/dimen_32"
+            android:ellipsize="end"
+            android:fontFamily="@font/geologica_auto_light"
+            android:maxLines="3"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:text="@string/default_hyphen"
+            android:textColor="@color/app_color_onSurface"
+            android:textSize="@dimen/text_size_18s"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/image_room_home_menu"
+            app:layout_constraintTop_toBottomOf="@+id/name_room_home_menu" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_devices_room_home_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:orientation="horizontal"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/dimen_41"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dimen_24"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description_room_home_menu"
+            tools:listitem="@layout/item_device_room_home" />
+
+        <TextView
+            android:id="@+id/edit_room_home_menu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/geologica_auto_extra_light"
+            android:maxLines="1"
+            android:text="@string/edit_default"
+            android:textColor="@color/app_color_primary"
+            android:textSize="@dimen/text_size_18s"
+            android:layout_marginTop="@dimen/dimen_41"
+            app:layout_constraintStart_toStartOf="@+id/image_room_home_menu"
+            app:layout_constraintTop_toBottomOf="@+id/list_devices_room_home_menu" />
+
+        <TextView
+            android:id="@+id/delete_room_home_menu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/geologica_auto_extra_light"
+            android:maxLines="1"
+            android:text="@string/delete_default"
+            android:textColor="@color/app_color_primary"
+            android:textSize="@dimen/text_size_18s"
+            android:layout_marginTop="@dimen/dimen_24"
+            app:layout_constraintStart_toStartOf="@+id/edit_room_home_menu"
+            app:layout_constraintTop_toBottomOf="@+id/edit_room_home_menu" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_sheet_setting_lighting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_bottom_sheet_lighting"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="550dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <View
+            android:id="@+id/lighting_console_container_poly"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_108"
+            android:layout_marginStart="@dimen/dimen_24"
+            android:layout_marginTop="@dimen/dimen_70"
+            android:layout_marginEnd="@dimen/dimen_18"
+            android:background="@drawable/shape_setting_lighting"
+            app:layout_constraintEnd_toStartOf="@+id/lighting_console_container_mono"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_current_mode_lighting_poly"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_14"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@+id/text_current_mode_lighting_poly"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/play_pause_container"
+            app:layout_constraintStart_toStartOf="@+id/lighting_console_container_poly"
+            app:layout_constraintTop_toTopOf="@+id/lighting_console_container_poly"
+            app:srcCompat="@drawable/placeholder_setting_lighting" />
+
+        <TextView
+            android:id="@+id/text_current_mode_lighting_poly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/geologica_auto_regular"
+            android:text="@string/default_hyphen"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/app_color_secondaryFixedDim"
+            android:textFontWeight="300"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:textSize="@dimen/text_size_16s"
+            app:layout_constraintBottom_toBottomOf="@+id/lighting_console_container_poly"
+            app:layout_constraintEnd_toStartOf="@+id/play_pause_container"
+            app:layout_constraintStart_toStartOf="@+id/lighting_console_container_poly" />
+
+        <View
+            android:id="@+id/play_pause_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginVertical="@dimen/dimen_14"
+            android:layout_marginStart="@dimen/dimen_24"
+            android:layout_marginEnd="@dimen/dimen_5"
+            android:background="@drawable/shape_button_circle_setting"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@+id/lighting_console_container_poly"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@+id/lighting_console_container_poly"
+            app:layout_constraintHorizontal_bias="0.62"
+            app:layout_constraintStart_toStartOf="@+id/lighting_console_container_poly"
+            app:layout_constraintTop_toTopOf="@+id/lighting_console_container_poly" />
+
+        <View
+            android:id="@+id/menu_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_marginStart="@dimen/dimen_14"
+            android:layout_marginEnd="@dimen/dimen_8"
+            android:background="@drawable/shape_button_circle_setting"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@+id/lighting_console_container_poly"
+            app:layout_constraintStart_toEndOf="@+id/play_pause_container"
+            app:layout_constraintTop_toTopOf="@+id/lighting_console_container_poly" />
+
+        <View
+            android:id="@+id/music_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:layout_marginStart="@dimen/dimen_14"
+            android:layout_marginEnd="@dimen/dimen_8"
+            android:background="@drawable/shape_button_circle_setting"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@+id/lighting_console_container_poly"
+            app:layout_constraintStart_toEndOf="@+id/play_pause_container"
+            app:layout_constraintBottom_toBottomOf="@+id/lighting_console_container_poly" />
+
+        <ImageView
+            android:id="@+id/button_play_pause"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_play"
+            android:paddingVertical="@dimen/dimen_21"
+            android:clickable="false"
+            android:focusable="true"
+            android:theme="@style/ButtonThemeOverlay"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@+id/play_pause_container"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@+id/play_pause_container"
+            app:layout_constraintStart_toStartOf="@+id/play_pause_container"
+            app:layout_constraintTop_toTopOf="@+id/play_pause_container" />
+
+        <ImageView
+            android:id="@+id/button_menu_lighting"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_menu_lighting"
+            android:padding="@dimen/dimen_4"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@+id/menu_container"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@+id/menu_container"
+            app:layout_constraintStart_toStartOf="@+id/menu_container"
+            app:layout_constraintTop_toTopOf="@+id/menu_container" />
+
+        <ImageView
+            android:id="@+id/button_music_lighting"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_music_lighting"
+            android:padding="@dimen/dimen_5"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@+id/music_container"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@+id/music_container"
+            app:layout_constraintStart_toStartOf="@+id/music_container"
+            app:layout_constraintTop_toTopOf="@+id/music_container" />
+
+        <View
+            android:id="@+id/lighting_console_container_mono"
+            android:layout_width="@dimen/dimen_108"
+            android:layout_height="@dimen/dimen_108"
+            android:layout_marginTop="@dimen/dimen_70"
+            android:layout_marginEnd="@dimen/dimen_24"
+            android:background="@drawable/shape_setting_lighting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_current_mode_lighting_mono"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_14"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            android:clickable="true"
+            app:layout_constraintBottom_toTopOf="@+id/text_current_mode_lighting_mono"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@+id/lighting_console_container_mono"
+            app:layout_constraintStart_toStartOf="@+id/lighting_console_container_mono"
+            app:layout_constraintTop_toTopOf="@+id/lighting_console_container_mono"
+            app:srcCompat="@drawable/mono_setting_lighting" />
+
+        <TextView
+            android:id="@+id/text_current_mode_lighting_mono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:fontFamily="@font/geologica_auto_regular"
+            android:text="@string/mono"
+            android:textColor="@color/app_color_secondaryFixedDim"
+            android:textFontWeight="300"
+            android:textSize="@dimen/text_size_16s"
+            app:layout_constraintBottom_toBottomOf="@+id/lighting_console_container_mono"
+            app:layout_constraintEnd_toEndOf="@+id/lighting_console_container_mono"
+            app:layout_constraintStart_toStartOf="@+id/lighting_console_container_mono" />
+
+        <View
+            android:id="@+id/lighting_container_header_list_mode"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_34"
+            android:layout_marginTop="@dimen/dimen_18"
+            android:background="@drawable/shape_setting_lighting_header"
+            app:layout_constraintEnd_toEndOf="@+id/lighting_console_container_poly"
+            app:layout_constraintStart_toStartOf="@+id/lighting_console_container_poly"
+            app:layout_constraintTop_toBottomOf="@+id/lighting_console_container_poly" />
+
+        <TextView
+            android:id="@+id/lighting_header_list_mode"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="start|center_vertical"
+            android:paddingStart="@dimen/dimen_10"
+            android:fontFamily="@font/geologica_auto_regular"
+            android:text="@string/lighting_mod_header"
+            android:textColor="@color/app_color_onTertiaryFixed"
+            android:textFontWeight="300"
+            android:textSize="@dimen/text_size_16s"
+            app:layout_constraintBottom_toBottomOf="@+id/lighting_container_header_list_mode"
+            app:layout_constraintEnd_toEndOf="@+id/lighting_container_header_list_mode"
+            app:layout_constraintStart_toStartOf="@+id/lighting_container_header_list_mode"
+            app:layout_constraintTop_toTopOf="@+id/lighting_container_header_list_mode" />
+
+        <View
+            android:id="@+id/container_button_lighting_new_mode"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_34"
+            android:layout_marginTop="@dimen/dimen_18"
+            android:background="@drawable/shape_button_lighting_new_mod"
+            app:layout_constraintEnd_toEndOf="@+id/lighting_console_container_mono"
+            app:layout_constraintStart_toStartOf="@+id/lighting_console_container_mono"
+            app:layout_constraintTop_toBottomOf="@+id/lighting_console_container_mono" />
+
+        <TextView
+            android:id="@+id/button_lighting_new_mode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/geologica_auto_medium"
+            android:text="@string/lighting_new_mode"
+            android:textColor="@color/app_color_secondaryFixed"
+            android:textFontWeight="300"
+            android:textSize="@dimen/text_size_16s"
+            app:layout_constraintBottom_toBottomOf="@+id/container_button_lighting_new_mode"
+            app:layout_constraintEnd_toEndOf="@+id/container_button_lighting_new_mode"
+            app:layout_constraintStart_toStartOf="@+id/container_button_lighting_new_mode"
+            app:layout_constraintTop_toTopOf="@+id/container_button_lighting_new_mode" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lighting_list_mode"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingHorizontal="@dimen/dimen_15"
+            android:paddingTop="@dimen/dimen_9"
+            android:visibility="gone"
+            tools:listitem="@layout/item_lighting_mode"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lighting_container_header_list_mode"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ProgressBar
+            android:id="@+id/loading_lighting_list"
+            android:layout_width="@dimen/dimen_41"
+            android:layout_height="@dimen/dimen_41"
+            android:layout_gravity="center_horizontal"
+            android:indeterminateTint="@color/app_color_onTertiaryFixed"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dimen_34"
+            app:layout_constraintTop_toBottomOf="@+id/button_lighting_new_mode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/error_message_lighting_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen_24"
+            android:gravity="center"
+            android:text="@string/error_message"
+            android:fontFamily="@font/geologica_auto_regular"
+            android:textColor="@color/app_color_onTertiaryFixed"
+            android:textFontWeight="300"
+            android:textSize="@dimen/text_size_16s"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dimen_34"
+            app:layout_constraintTop_toBottomOf="@+id/button_lighting_new_mode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/empty_lighting_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_24"
+            android:gravity="center"
+            android:text="@string/empty_lighting_list"
+            android:fontFamily="@font/geologica_auto_regular"
+            android:textColor="@color/app_color_onTertiaryFixed"
+            android:textFontWeight="300"
+            android:textSize="@dimen/text_size_16s"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dimen_34"
+            app:layout_constraintTop_toBottomOf="@+id/button_lighting_new_mode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"  />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_sheet_setting_lighting_mono"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_bottom_sheet_lighting"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="550dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <TextView
+            android:id="@+id/header_lighting_mono"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="start|center_vertical"
+            android:paddingStart="@dimen/dimen_10"
+            android:fontFamily="@font/geologica_auto_regular"
+            android:text="@string/header_lighting_mono"
+            android:textColor="@color/app_color_onTertiaryFixed"
+            android:textFontWeight="300"
+            android:paddingVertical="@dimen/dimen_3"
+            android:paddingHorizontal="@dimen/dimen_14"
+            android:layout_marginStart="@dimen/dimen_24"
+            android:layout_marginTop="@dimen/dimen_41"
+            android:background="@drawable/shape_setting_lighting_header"
+            android:textSize="@dimen/text_size_18s"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/button_lighting_mono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_24"
+            android:background="@drawable/shape_button_lighting"
+            android:fontFamily="@font/geologica_auto_medium"
+            android:gravity="center"
+            android:clickable="false"
+            android:enabled="false"
+            android:paddingHorizontal="@dimen/dimen_34"
+            android:paddingTop="@dimen/dimen_10"
+            android:paddingBottom="@dimen/dimen_12"
+            android:text="@string/choose"
+            android:textColor="@color/app_color_secondaryFixed"
+            android:textFontWeight="300"
+            android:textSize="@dimen/text_size_18s"
+            app:layout_constraintBottom_toBottomOf="@+id/lighting_color_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lighting_color_container" />
+
+        <View
+            android:id="@+id/lighting_color_container"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_70"
+            android:layout_marginStart="@dimen/dimen_24"
+            android:layout_marginEnd="@dimen/dimen_34"
+            android:layout_marginTop="@dimen/dimen_18"
+            android:background="@drawable/shape_setting_lighting"
+            app:layout_constraintEnd_toStartOf="@+id/button_lighting_mono"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_lighting_mono" />
+
+        <TextView
+            android:id="@+id/header_color_lighting_mono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/geologica_auto_regular"
+            android:maxLines="1"
+            android:text="@string/header_color"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:layout_marginStart="@dimen/dimen_24"
+            android:textColor="@color/app_color_secondaryFixedDim"
+            android:textFontWeight="300"
+            android:textSize="@dimen/text_size_16s"
+            app:layout_constraintStart_toStartOf="@+id/lighting_color_container"
+            app:layout_constraintTop_toTopOf="@+id/lighting_color_container" />
+
+        <TextView
+            android:id="@+id/text_color_lighting_mono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_24"
+            android:layout_marginBottom="@dimen/dimen_8"
+            android:ellipsize="end"
+            android:textAllCaps="true"
+            android:fontFamily="@font/geologica_auto_bold"
+            android:maxLines="1"
+            android:text="@string/default_hyphen"
+            android:textColor="@color/app_color_secondaryFixedDim"
+            android:textFontWeight="300"
+            android:textSize="@dimen/text_size_18s"
+            app:layout_constraintBottom_toBottomOf="@+id/lighting_color_container"
+            app:layout_constraintStart_toStartOf="@+id/lighting_color_container"
+            app:layout_constraintTop_toBottomOf="@+id/header_color_lighting_mono" />
+
+        <View
+            android:id="@+id/divider_lighting_mono"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/app_color_onSecondaryFixedVariant"
+            app:layout_constraintBottom_toTopOf="@+id/palette_lighting_mono"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/palette_lighting_mono"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimen_21"
+            android:scaleType="centerCrop"
+            android:src="@drawable/colors_lighting_mono_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lighting_color_container" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

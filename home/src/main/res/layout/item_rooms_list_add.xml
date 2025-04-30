@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="false"
+    android:background="@drawable/shape_card_add_dash"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="@dimen/dimen_16"
+    android:layout_marginBottom="@dimen/dimen_24"
+    android:id="@+id/item_add_room">
+
+    <TextView
+        android:id="@+id/name_module"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_88"
+        android:ellipsize="end"
+        android:fontFamily="@font/geologica_auto_regular"
+        android:gravity="center"
+        android:hint="@string/add_room"
+        android:maxLines="1"
+        android:textColor="@color/app_color_onSurfaceVariant"
+        android:textFontWeight="300"
+        android:textSize="@dimen/text_size_16s"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

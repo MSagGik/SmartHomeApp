@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_added_device"
+    android:layout_width="@dimen/dimen_162"
+    android:layout_height="@dimen/dimen_82"
+    android:layout_marginEnd="@dimen/dimen_24"
+    android:background="@drawable/shape_card"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="false"
+    android:padding="@dimen/dimen_16">
+
+    <ImageView
+        android:id="@+id/image_device"
+        android:layout_width="@dimen/dimen_24"
+        android:layout_height="@dimen/dimen_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_unknown_device" />
+
+    <TextView
+        android:id="@+id/name_device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:ellipsize="end"
+        android:fontFamily="@font/geologica_auto_regular"
+        android:maxLines="1"
+        android:text="@string/name_default"
+        android:textColor="@color/app_color_onSurface"
+        android:textSize="@dimen/text_size_16s"
+        app:layout_constraintBottom_toBottomOf="@+id/image_device"
+        app:layout_constraintStart_toEndOf="@+id/image_device"
+        app:layout_constraintTop_toTopOf="@+id/image_device" />
+
+    <ImageView
+        android:id="@+id/image_type_device_lighting"
+        android:layout_width="@dimen/dimen_16"
+        android:layout_height="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:contentDescription="@string/default_hyphen"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/image_device"
+        app:layout_constraintTop_toBottomOf="@+id/image_device"
+        app:srcCompat="@drawable/ic_device_lighting" />
+
+    <ImageView
+        android:id="@+id/image_type_device_temp"
+        android:layout_width="@dimen/dimen_16"
+        android:layout_height="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:contentDescription="@string/default_hyphen"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/image_type_device_lighting"
+        app:layout_constraintTop_toBottomOf="@+id/image_device"
+        app:srcCompat="@drawable/ic_device_temp" />
+
+    <ImageView
+        android:id="@+id/image_type_device_humidity"
+        android:layout_width="@dimen/dimen_16"
+        android:layout_height="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:contentDescription="@string/default_hyphen"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/image_type_device_temp"
+        app:layout_constraintTop_toBottomOf="@+id/image_device"
+        app:srcCompat="@drawable/ic_device_humidity" />
+
+    <ImageView
+        android:id="@+id/image_type_device_pressure"
+        android:layout_width="@dimen/dimen_16"
+        android:layout_height="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:contentDescription="@string/default_hyphen"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/image_type_device_humidity"
+        app:layout_constraintTop_toBottomOf="@+id/image_device"
+        app:srcCompat="@drawable/ic_device_pressure" />
+
+    <ImageView
+        android:id="@+id/image_type_device_kitchen"
+        android:layout_width="@dimen/dimen_16"
+        android:layout_height="@dimen/dimen_16"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:contentDescription="@string/default_hyphen"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/image_type_device_pressure"
+        app:layout_constraintTop_toBottomOf="@+id/image_device"
+        app:srcCompat="@drawable/ic_device_kitchen" />
+
+    <ImageView
+        android:id="@+id/image_type_device_smart"
+        android:layout_width="@dimen/dimen_16"
+        android:layout_height="@dimen/dimen_16"
+        android:contentDescription="@string/default_hyphen"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/image_type_device_kitchen"
+        app:layout_constraintTop_toBottomOf="@+id/image_device"
+        app:srcCompat="@drawable/ic_device_smart" />
+
+    <ImageView
+        android:id="@+id/image_type_device_tv"
+        android:layout_width="@dimen/dimen_16"
+        android:layout_height="@dimen/dimen_16"
+        android:contentDescription="@string/default_hyphen"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/dimen_10"
+        app:layout_constraintStart_toEndOf="@+id/image_type_device_smart"
+        app:layout_constraintTop_toBottomOf="@+id/image_device"
+        app:srcCompat="@drawable/ic_device_tv" />
+
+    <ImageView
+        android:id="@+id/image_type_device_auto"
+        android:layout_width="@dimen/dimen_16"
+        android:layout_height="@dimen/dimen_16"
+        android:contentDescription="@string/default_hyphen"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/dimen_10"
+        app:layout_constraintStart_toEndOf="@+id/image_type_device_tv"
+        app:layout_constraintTop_toBottomOf="@+id/image_device"
+        app:srcCompat="@drawable/ic_device_auto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

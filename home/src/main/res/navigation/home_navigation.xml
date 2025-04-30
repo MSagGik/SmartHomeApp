@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="io.github.msaggik.home.presentation.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_roomHomeFragment"
+            app:destination="@id/roomHomeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_placeholder"
+            app:destination="@id/placeholder" />
+        <action
+            android:id="@+id/action_homeFragment_to_newRoomFragment"
+            app:destination="@id/newRoomFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/roomHomeFragment"
+        android:name="io.github.msaggik.home.presentation.ui.RoomHomeFragment"
+        android:label="fragment_room_home"
+        tools:layout="@layout/fragment_room_home" >
+        <action
+            android:id="@+id/action_roomHomeFragment_to_newRoomFragment"
+            app:destination="@id/newRoomFragment" />
+        <action
+            android:id="@+id/action_roomHomeFragment_to_newLightingModeFragment"
+            app:destination="@id/newLightingModeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/placeholder"
+        android:name="io.github.msaggik.ui.PlaceholderFragment"
+        android:label="fragment_placeholder"
+        tools:layout="@layout/fragment_placeholder" />
+    <fragment
+        android:id="@+id/newRoomFragment"
+        android:name="io.github.msaggik.home.presentation.ui.NewRoomFragment"
+        android:label="fragment_new_room"
+        tools:layout="@layout/fragment_new_room" />
+    <fragment
+        android:id="@+id/newLightingModeFragment"
+        android:name="io.github.msaggik.home.presentation.ui.NewLightingModeFragment"
+        android:label="fragment_new_lighting_mode"
+        tools:layout="@layout/fragment_new_lighting_mode" />
+
+</navigation>
