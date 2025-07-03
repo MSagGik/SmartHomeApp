@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_card"
+    android:paddingHorizontal="@dimen/dimen_34"
+    android:paddingTop="@dimen/dimen_24"
+    android:paddingBottom="@dimen/dimen_41">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_vertical"
+        android:layout_marginHorizontal="@dimen/dimen_24"
+        android:fontFamily="@font/geologica_auto_medium"
+        android:text="@string/add_device"
+        android:textColor="@color/app_color_onSurface"
+        android:textSize="@dimen/text_size_18s"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_a"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_device_dialog"
+        android:layout_width="@dimen/dimen_52"
+        android:layout_height="@dimen/dimen_52"
+        android:layout_marginTop="@dimen/dimen_24"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_a"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:srcCompat="@drawable/ic_unknown_device" />
+
+    <TextView
+        android:id="@+id/name_device_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:fontFamily="@font/geologica_auto_regular"
+        android:text="@string/name_default"
+        android:textColor="@color/app_color_onSurface"
+        android:textSize="@dimen/text_size_16s"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_a"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_device_dialog" />
+
+    <TextView
+        android:id="@+id/mac_device_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:fontFamily="@font/geologica_auto_light"
+        android:text="@string/device_mac"
+        android:textColor="@color/app_color_onSurface"
+        android:textSize="@dimen/text_size_12s"
+        app:layout_constraintEnd_toEndOf="@+id/name_device_dialog"
+        app:layout_constraintStart_toStartOf="@+id/name_device_dialog"
+        app:layout_constraintTop_toBottomOf="@+id/name_device_dialog" />
+
+    <TextView
+        android:id="@+id/functions_device_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/geologica_auto_medium"
+        android:text="@string/functions_device"
+        android:textColor="@color/app_color_onSurface"
+        android:textSize="@dimen/text_size_14s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_vertical_a"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <ImageView
+        android:id="@+id/image_device_lighting_dialog"
+        android:layout_width="@dimen/dimen_32"
+        android:layout_height="@dimen/dimen_32"
+        android:layout_marginTop="@dimen/dimen_16"
+        app:layout_constraintStart_toEndOf="@+id/guideline_vertical_a"
+        app:layout_constraintTop_toBottomOf="@+id/functions_device_dialog"
+        app:srcCompat="@drawable/ic_device_lighting" />
+
+    <TextView
+        android:id="@+id/name_device_lighting_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:fontFamily="@font/geologica_auto_regular"
+        android:text="@string/lighting"
+        android:textColor="@color/app_color_onSurface"
+        android:textSize="@dimen/text_size_14s"
+        app:layout_constraintBottom_toBottomOf="@+id/image_device_lighting_dialog"
+        app:layout_constraintStart_toEndOf="@+id/image_device_lighting_dialog"
+        app:layout_constraintTop_toTopOf="@+id/image_device_lighting_dialog" />
+
+    <Switch
+        android:id="@+id/switch_lighting_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:thumb="@drawable/switch_thumb_dialog"
+        android:track="@drawable/switch_track_dialog"
+        app:layout_constraintBottom_toBottomOf="@+id/image_device_lighting_dialog"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_b"
+        app:layout_constraintTop_toTopOf="@+id/image_device_lighting_dialog"
+        app:thumbIconSize="@dimen/dimen_20"
+        app:thumbTint="@color/switch_thumb_dialog_selector"
+        app:trackTint="@color/switch_track_dialog_selector"
+        app:useMaterialThemeColors="false"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <ImageView
+        android:id="@+id/image_device_temperature_dialog"
+        android:layout_width="@dimen/dimen_32"
+        android:layout_height="@dimen/dimen_32"
+        android:layout_marginTop="@dimen/dimen_16"
+        app:layout_constraintStart_toEndOf="@+id/guideline_vertical_a"
+        app:layout_constraintTop_toBottomOf="@+id/image_device_lighting_dialog"
+        app:srcCompat="@drawable/ic_device_temp" />
+
+    <TextView
+        android:id="@+id/name_device_temperature_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:fontFamily="@font/geologica_auto_regular"
+        android:text="@string/device_temperature"
+        android:textColor="@color/app_color_onSurface"
+        android:textSize="@dimen/text_size_14s"
+        app:layout_constraintBottom_toBottomOf="@+id/image_device_temperature_dialog"
+        app:layout_constraintStart_toEndOf="@+id/image_device_temperature_dialog"
+        app:layout_constraintTop_toTopOf="@+id/image_device_temperature_dialog" />
+
+    <Switch
+        android:id="@+id/switch_temperature_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:thumb="@drawable/switch_thumb_dialog"
+        android:track="@drawable/switch_track_dialog"
+        app:layout_constraintBottom_toBottomOf="@+id/image_device_temperature_dialog"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_b"
+        app:layout_constraintTop_toTopOf="@+id/image_device_temperature_dialog"
+        app:thumbIconSize="@dimen/dimen_20"
+        app:thumbTint="@color/switch_thumb_dialog_selector"
+        app:trackTint="@color/switch_track_dialog_selector"
+        app:useMaterialThemeColors="false"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <ImageView
+        android:id="@+id/image_device_humidity_dialog"
+        android:layout_width="@dimen/dimen_32"
+        android:layout_height="@dimen/dimen_32"
+        android:layout_marginTop="@dimen/dimen_16"
+        app:layout_constraintStart_toEndOf="@+id/guideline_vertical_a"
+        app:layout_constraintTop_toBottomOf="@+id/image_device_temperature_dialog"
+        app:srcCompat="@drawable/ic_device_humidity" />
+
+    <TextView
+        android:id="@+id/name_device_humidity_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:fontFamily="@font/geologica_auto_regular"
+        android:text="@string/device_humidity"
+        android:textColor="@color/app_color_onSurface"
+        android:textSize="@dimen/text_size_14s"
+        app:layout_constraintBottom_toBottomOf="@+id/image_device_humidity_dialog"
+        app:layout_constraintStart_toEndOf="@+id/image_device_humidity_dialog"
+        app:layout_constraintTop_toTopOf="@+id/image_device_humidity_dialog" />
+
+    <Switch
+        android:id="@+id/switch_humidity_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:thumb="@drawable/switch_thumb_dialog"
+        android:track="@drawable/switch_track_dialog"
+        app:layout_constraintBottom_toBottomOf="@+id/image_device_humidity_dialog"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_b"
+        app:layout_constraintTop_toTopOf="@+id/image_device_humidity_dialog"
+        app:thumbIconSize="@dimen/dimen_20"
+        app:thumbTint="@color/switch_thumb_dialog_selector"
+        app:trackTint="@color/switch_track_dialog_selector"
+        app:useMaterialThemeColors="false"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <ImageView
+        android:id="@+id/image_device_pressure_dialog"
+        android:layout_width="@dimen/dimen_32"
+        android:layout_height="@dimen/dimen_32"
+        android:layout_marginTop="@dimen/dimen_16"
+        app:layout_constraintStart_toEndOf="@+id/guideline_vertical_a"
+        app:layout_constraintTop_toBottomOf="@+id/image_device_humidity_dialog"
+        app:srcCompat="@drawable/ic_device_pressure" />
+
+    <TextView
+        android:id="@+id/name_device_pressure_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:fontFamily="@font/geologica_auto_regular"
+        android:text="@string/device_pressure"
+        android:textColor="@color/app_color_onSurface"
+        android:textSize="@dimen/text_size_14s"
+        app:layout_constraintBottom_toBottomOf="@+id/image_device_pressure_dialog"
+        app:layout_constraintStart_toEndOf="@+id/image_device_pressure_dialog"
+        app:layout_constraintTop_toTopOf="@+id/image_device_pressure_dialog" />
+
+    <Switch
+        android:id="@+id/switch_pressure_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:thumb="@drawable/switch_thumb_dialog"
+        android:track="@drawable/switch_track_dialog"
+        app:layout_constraintBottom_toBottomOf="@+id/image_device_pressure_dialog"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_vertical_b"
+        app:layout_constraintTop_toTopOf="@+id/image_device_pressure_dialog"
+        app:thumbIconSize="@dimen/dimen_20"
+        app:thumbTint="@color/switch_thumb_dialog_selector"
+        app:trackTint="@color/switch_track_dialog_selector"
+        app:useMaterialThemeColors="false"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.61" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.64" />
+
+    <ImageView
+        android:id="@+id/image_device_kitchen_dialog"
+        android:layout_width="@dimen/dimen_32"
+        android:layout_height="@dimen/dimen_32"
+        app:layout_constraintStart_toEndOf="@+id/guideline_vertical_c"
+        android:layout_marginTop="@dimen/dimen_16"
+        app:layout_constraintTop_toBottomOf="@+id/functions_device_dialog"
+        app:srcCompat="@drawable/ic_device_kitchen" />
+
+    <TextView
+        android:id="@+id/name_device_kitchen_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:fontFamily="@font/geologica_auto_regular"
+        android:text="@string/device_kitchen"
+        android:textColor="@color/app_color_onSurface"
+        android:textSize="@dimen/text_size_14s"
+        app:layout_constraintBottom_toBottomOf="@+id/image_device_kitchen_dialog"
+        app:layout_constraintStart_toEndOf="@+id/image_device_kitchen_dialog"
+        app:layout_constraintTop_toTopOf="@+id/image_device_kitchen_dialog" />
+
+    <Switch
+        android:id="@+id/switch_kitchen_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:thumb="@drawable/switch_thumb_dialog"
+        android:track="@drawable/switch_track_dialog"
+        app:layout_constraintBottom_toBottomOf="@+id/image_device_kitchen_dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image_device_kitchen_dialog"
+        app:thumbIconSize="@dimen/dimen_20"
+        app:thumbTint="@color/switch_thumb_dialog_selector"
+        app:trackTint="@color/switch_track_dialog_selector"
+        app:useMaterialThemeColors="false"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <ImageView
+        android:id="@+id/image_device_tv_dialog"
+        android:layout_width="@dimen/dimen_32"
+        android:layout_height="@dimen/dimen_32"
+        android:layout_marginTop="@dimen/dimen_16"
+        app:layout_constraintStart_toEndOf="@+id/guideline_vertical_c"
+        app:layout_constraintTop_toBottomOf="@+id/image_device_kitchen_dialog"
+        app:srcCompat="@drawable/ic_device_tv" />
+
+    <TextView
+        android:id="@+id/name_device_tv_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:fontFamily="@font/geologica_auto_regular"
+        android:text="@string/device_tv"
+        android:textColor="@color/app_color_onSurface"
+        android:textSize="@dimen/text_size_14s"
+        app:layout_constraintBottom_toBottomOf="@+id/image_device_tv_dialog"
+        app:layout_constraintStart_toEndOf="@+id/image_device_tv_dialog"
+        app:layout_constraintTop_toTopOf="@+id/image_device_tv_dialog" />
+
+    <Switch
+        android:id="@+id/switch_tv_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:thumb="@drawable/switch_thumb_dialog"
+        android:track="@drawable/switch_track_dialog"
+        app:layout_constraintBottom_toBottomOf="@+id/image_device_tv_dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image_device_tv_dialog"
+        app:thumbIconSize="@dimen/dimen_20"
+        app:thumbTint="@color/switch_thumb_dialog_selector"
+        app:trackTint="@color/switch_track_dialog_selector"
+        app:useMaterialThemeColors="false"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <ImageView
+        android:id="@+id/image_device_auto_dialog"
+        android:layout_width="@dimen/dimen_32"
+        android:layout_height="@dimen/dimen_32"
+        android:layout_marginTop="@dimen/dimen_16"
+        app:layout_constraintStart_toEndOf="@+id/guideline_vertical_c"
+        app:layout_constraintTop_toBottomOf="@+id/image_device_tv_dialog"
+        app:srcCompat="@drawable/ic_device_auto" />
+
+    <TextView
+        android:id="@+id/name_device_auto_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:fontFamily="@font/geologica_auto_regular"
+        android:text="@string/device_auto"
+        android:textColor="@color/app_color_onSurface"
+        android:textSize="@dimen/text_size_14s"
+        app:layout_constraintBottom_toBottomOf="@+id/image_device_auto_dialog"
+        app:layout_constraintStart_toEndOf="@+id/image_device_auto_dialog"
+        app:layout_constraintTop_toTopOf="@+id/image_device_auto_dialog" />
+
+    <Switch
+        android:id="@+id/switch_auto_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:thumb="@drawable/switch_thumb_dialog"
+        android:track="@drawable/switch_track_dialog"
+        app:layout_constraintBottom_toBottomOf="@+id/image_device_auto_dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image_device_auto_dialog"
+        app:thumbIconSize="@dimen/dimen_20"
+        app:thumbTint="@color/switch_thumb_dialog_selector"
+        app:trackTint="@color/switch_track_dialog_selector"
+        app:useMaterialThemeColors="false"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <ImageView
+        android:id="@+id/image_device_universal_smart_dialog"
+        android:layout_width="@dimen/dimen_32"
+        android:layout_height="@dimen/dimen_32"
+        android:layout_marginTop="@dimen/dimen_16"
+        app:layout_constraintStart_toEndOf="@+id/guideline_vertical_c"
+        app:layout_constraintTop_toBottomOf="@+id/image_device_auto_dialog"
+        app:srcCompat="@drawable/ic_device_smart" />
+
+    <TextView
+        android:id="@+id/name_device_universal_smart_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:fontFamily="@font/geologica_auto_regular"
+        android:text="@string/device_universal_smart"
+        android:textColor="@color/app_color_onSurface"
+        android:textSize="@dimen/text_size_14s"
+        app:layout_constraintBottom_toBottomOf="@+id/image_device_universal_smart_dialog"
+        app:layout_constraintStart_toEndOf="@+id/image_device_universal_smart_dialog"
+        app:layout_constraintTop_toTopOf="@+id/image_device_universal_smart_dialog" />
+
+    <Switch
+        android:id="@+id/switch_universal_smart_dialo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:thumb="@drawable/switch_thumb_dialog"
+        android:track="@drawable/switch_track_dialog"
+        app:layout_constraintBottom_toBottomOf="@+id/image_device_universal_smart_dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image_device_universal_smart_dialog"
+        app:thumbIconSize="@dimen/dimen_20"
+        app:thumbTint="@color/switch_thumb_dialog_selector"
+        app:trackTint="@color/switch_track_dialog_selector"
+        app:useMaterialThemeColors="false"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/button_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_24"
+        android:clickable="true"
+        android:fontFamily="@font/geologica_auto_medium"
+        android:paddingVertical="@dimen/dimen_10"
+        android:text="@string/cancel"
+        android:textColor="@color/app_color_onSurface"
+        android:textSize="@dimen/text_size_16s"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_device_pressure_dialog" />
+
+    <TextView
+        android:id="@+id/button_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:fontFamily="@font/geologica_auto_medium"
+        android:paddingVertical="@dimen/dimen_10"
+        android:text="@string/add"
+        android:textColor="@color/app_color_onSurface"
+        android:textSize="@dimen/text_size_16s"
+        app:layout_constraintBottom_toBottomOf="@+id/button_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_cancel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_device_room"
+    android:layout_width="@dimen/dimen_199"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/dimen_16"
+    android:background="@drawable/shape_state_item_device"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="@dimen/dimen_16" >
+
+    <ImageView
+        android:id="@+id/image_type_device"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:contentDescription="@string/default_hyphen"
+        android:scaleType="centerCrop"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_unknown_device" />
+
+    <TextView
+        android:id="@+id/name_device"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:ellipsize="end"
+        android:fontFamily="@font/geologica_auto_medium"
+        android:hint="@string/name_default"
+        android:maxLines="1"
+        android:textColor="@color/app_color_onBackground"
+        android:textColorHint="@color/app_color_onBackground"
+        android:textFontWeight="300"
+        android:textSize="@dimen/text_size_16s"
+        app:layout_constraintStart_toEndOf="@+id/image_type_device"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mac_device"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:ellipsize="end"
+        android:fontFamily="@font/geologica_auto_medium"
+        android:hint="@string/device_mac"
+        android:maxLines="1"
+        android:textColor="@color/app_color_onBackground"
+        android:textColorHint="@color/app_color_onBackground"
+        android:textFontWeight="300"
+        android:textSize="@dimen/text_size_16s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_type_device" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

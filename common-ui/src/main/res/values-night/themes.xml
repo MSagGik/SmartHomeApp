@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SmartHomeApp" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:statusBarColor">@color/app_color_background</item>
+        <item name="android:navigationBarColor">@color/app_color_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+<!--        md-->
+        <item name="colorPrimary">@color/app_color_primary</item>
+        <item name="colorOnPrimary">@color/app_color_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/app_color_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/app_color_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/app_color_secondary</item>
+        <item name="colorOnSecondary">@color/app_color_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/app_color_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/app_color_onSecondaryContainer</item>
+        <item name="colorTertiary">@color/app_color_tertiary</item>
+        <item name="colorOnTertiary">@color/app_color_onTertiary</item>
+        <item name="colorTertiaryContainer">@color/app_color_tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/app_color_onTertiaryContainer</item>
+        <item name="colorError">@color/app_color_error</item>
+        <item name="colorOnError">@color/app_color_onError</item>
+        <item name="colorErrorContainer">@color/app_color_errorContainer</item>
+        <item name="colorOnErrorContainer">@color/app_color_onErrorContainer</item>
+        <item name="android:colorBackground">@color/app_color_background</item>
+        <item name="colorOnBackground">@color/app_color_onBackground</item>
+        <item name="colorSurface">@color/app_color_surface</item>
+        <item name="colorOnSurface">@color/app_color_onSurface</item>
+        <item name="colorSurfaceVariant">@color/app_color_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/app_color_onSurfaceVariant</item>
+        <item name="colorOutline">@color/app_color_outline</item>
+        <item name="colorOutlineVariant">@color/app_color_outlineVariant</item>
+        <item name="colorSurfaceInverse">@color/app_color_inverseSurface</item>
+        <item name="colorOnSurfaceInverse">@color/app_color_inverseOnSurface</item>
+        <item name="colorPrimaryInverse">@color/app_color_inversePrimary</item>
+        <item name="colorPrimaryFixed">@color/app_color_primaryFixed</item>
+        <item name="colorOnPrimaryFixed">@color/app_color_onPrimaryFixed</item>
+        <item name="colorPrimaryFixedDim">@color/app_color_primaryFixedDim</item>
+        <item name="colorOnPrimaryFixedVariant">@color/app_color_onPrimaryFixedVariant</item>
+        <item name="colorSecondaryFixed">@color/app_color_secondaryFixed</item>
+        <item name="colorOnSecondaryFixed">@color/app_color_onSecondaryFixed</item>
+        <item name="colorSecondaryFixedDim">@color/app_color_secondaryFixedDim</item>
+        <item name="colorOnSecondaryFixedVariant">@color/app_color_onSecondaryFixedVariant</item>
+        <item name="colorTertiaryFixed">@color/app_color_tertiaryFixed</item>
+        <item name="colorOnTertiaryFixed">@color/app_color_onTertiaryFixed</item>
+        <item name="colorTertiaryFixedDim">@color/app_color_tertiaryFixedDim</item>
+        <item name="colorOnTertiaryFixedVariant">@color/app_color_onTertiaryFixedVariant</item>
+        <item name="colorSurfaceDim">@color/app_color_surfaceDim</item>
+        <item name="colorSurfaceBright">@color/app_color_surfaceBright</item>
+        <item name="colorSurfaceContainerLowest">@color/app_color_surfaceContainerLowest</item>
+        <item name="colorSurfaceContainerLow">@color/app_color_surfaceContainerLow</item>
+        <item name="colorSurfaceContainer">@color/app_color_surfaceContainer</item>
+        <item name="colorSurfaceContainerHigh">@color/app_color_surfaceContainerHigh</item>
+        <item name="colorSurfaceContainerHighest">@color/app_color_surfaceContainerHighest</item>
+    </style>
+</resources>

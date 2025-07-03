@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_lighting_mode"
+    android:layout_width="@dimen/dimen_108"
+    android:layout_height="@dimen/dimen_108"
+    android:layout_margin="@dimen/dimen_9"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/shape_setting_lighting"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="false"
+    android:paddingHorizontal="@dimen/dimen_16">
+
+    <ImageView
+        android:id="@+id/image_lighting_mode"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dimen_14"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintBottom_toTopOf="@+id/text_lighting_mode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/placeholder_setting_lighting" />
+
+    <TextView
+        android:id="@+id/text_lighting_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_10"
+        android:fontFamily="@font/geologica_auto_regular"
+        android:text="@string/mono"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/app_color_secondaryFixedDim"
+        android:textFontWeight="300"
+        android:textSize="@dimen/text_size_16s"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

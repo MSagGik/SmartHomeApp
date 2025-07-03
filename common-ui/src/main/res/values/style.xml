@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/geologica_auto_regular</item>
+        <item name="android:textFontWeight">500</item>
+        <item name="android:textSize">@dimen/text_size_bottom_navigation_menu</item>
+        <item name="itemTextAppearanceActive">@style/BottomNavigationView</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavigationView</item>
+        <item name="android:background">@color/app_color_background</item>
+        <item name="itemIconTint">@color/bottom_navigation_menu_color</item>
+        <item name="itemTextColor">@color/bottom_navigation_menu_color</item>
+        <item name="itemRippleColor">@null</item>
+        <item name="labelVisibilityMode">unlabeled</item>
+        <item name="itemIconSize">@dimen/dimen_32</item>
+    </style>
+
+    <style name="HeaderOne">
+        <item name="android:textSize">@dimen/text_size_22s</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:fontFamily">@font/geologica_auto_medium</item>
+        <item name="android:textColor">@color/app_color_onBackground</item>
+        <item name="android:textFontWeight">500</item>
+    </style>
+
+    <style name="HeaderTextSecond">
+        <item name="android:textSize">@dimen/text_size_22s</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:fontFamily">@font/geologica_auto_medium</item>
+        <item name="android:textColor">@color/app_color_onSurface</item>
+        <item name="android:textFontWeight">500</item>
+    </style>
+
+    <style name="HeaderTwo">
+        <item name="android:textSize">@dimen/text_size_16s</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:fontFamily">@font/geologica_auto_regular</item>
+        <item name="android:textColor">@color/app_color_onSurface</item>
+        <item name="android:textFontWeight">300</item>
+    </style>
+
+    <style name="HeaderTree">
+        <item name="android:textSize">@dimen/text_size_12s</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:fontFamily">@font/geologica_auto_medium</item>
+        <item name="android:textColor">@color/app_color_onBackground</item>
+        <item name="android:textFontWeight">100</item>
+    </style>
+
+    <style name="BaseLanguage">
+        <item name="android:fontFamily">@font/geologica_auto_medium</item>
+        <item name="android:textFontWeight">300</item>
+        <item name="android:textSize">@dimen/text_size_14s</item>
+        <item name="android:textColor">@color/app_color_onSurface</item>
+    </style>
+
+    <style name="ButtonThemeOverlay" parent="ThemeOverlay.AppCompat">
+        <item name="colorControlHighlight">@color/background_button_click</item>
+    </style>
+
+    <style name="RoomTabLayoutHeader" parent="Widget.Material3.TabLayout">
+        <item name="android:fontFamily">@font/geologica_auto_regular</item>
+        <item name="android:textFontWeight">500</item>
+        <item name="android:textSize">@dimen/text_size_20s</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextInputLayoutRoom" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textSize">@dimen/text_size_18s</item>
+        <item name="android:fontFamily">@font/geologica_auto_regular</item>
+        <item name="android:textFontWeight">350</item>
+        <item name="android:textColor">@color/app_color_onBackground</item>
+    </style>
+
+</resources>

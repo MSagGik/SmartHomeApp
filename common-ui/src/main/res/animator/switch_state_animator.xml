@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <objectAnimator
+            android:propertyName="trackTint"
+            android:duration="200"
+            android:valueFrom="@color/app_color_secondary"
+            android:valueTo="@color/app_color_primary"
+            android:valueType="intType"/>
+    </item>
+    <item>
+        <objectAnimator
+            android:propertyName="trackTint"
+            android:duration="200"
+            android:valueFrom="@color/app_color_primary"
+            android:valueTo="@color/app_color_secondary"
+            android:valueType="intType"/>
+    </item>
+</selector>

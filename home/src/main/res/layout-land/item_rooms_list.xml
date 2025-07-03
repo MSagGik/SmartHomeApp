@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_room"
+    android:layout_width="@dimen/dimen_178"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="@dimen/dimen_24"
+    android:background="@drawable/shape_card"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="false"
+    android:padding="@dimen/dimen_16">
+
+    <ImageView
+        android:id="@+id/image_room"
+        android:layout_width="@dimen/dimen_70"
+        android:layout_height="@dimen/dimen_70"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/placeholder_room" />
+
+    <TextView
+        android:id="@+id/name_room"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:ellipsize="end"
+        android:fontFamily="@font/geologica_auto_medium"
+        android:hint="@string/default_hyphen"
+        android:maxLines="1"
+        android:textColor="@color/app_color_onBackground"
+        android:textColorHint="@color/app_color_onBackground"
+        android:textFontWeight="500"
+        android:textSize="@dimen/text_size_22s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_room" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:flexWrap="wrap"
+        app:justifyContent="flex_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_room">
+
+        <ImageView
+            android:id="@+id/image_type_device_lighting"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_30"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:contentDescription="@string/default_hyphen"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_device_lighting" />
+
+        <ImageView
+            android:id="@+id/image_type_device_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_30"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:contentDescription="@string/default_hyphen"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_device_temp" />
+
+        <ImageView
+            android:id="@+id/image_type_device_humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_30"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:contentDescription="@string/default_hyphen"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_device_humidity" />
+
+        <ImageView
+            android:id="@+id/image_type_device_pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_30"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:contentDescription="@string/default_hyphen"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_device_pressure" />
+
+        <ImageView
+            android:id="@+id/image_type_device_kitchen"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_30"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:contentDescription="@string/default_hyphen"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_device_kitchen" />
+
+        <ImageView
+            android:id="@+id/image_type_device_smart"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_30"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:contentDescription="@string/default_hyphen"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_device_smart" />
+
+        <ImageView
+            android:id="@+id/image_type_device_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_30"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:contentDescription="@string/default_hyphen"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_device_tv" />
+
+        <ImageView
+            android:id="@+id/image_type_device_auto"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_30"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:contentDescription="@string/default_hyphen"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_device_auto" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:end="@dimen/dimen_21_5">
+        <shape>
+            <size android:height="@dimen/dimen_41" />
+            <solid android:color="@color/app_color_primary" />
+            <corners android:radius="@dimen/dimen_21" />
+        </shape>
+    </item>
+    <item android:start="@dimen/dimen_21_5">
+        <shape>
+            <size android:height="@dimen/dimen_41" />
+            <solid android:color="@color/app_color_tertiaryVariant" />
+            <corners android:radius="@dimen/dimen_21" />
+        </shape>
+    </item>
+    <item android:id="@android:id/background" android:start="@dimen/dimen_21_5" android:end="@dimen/dimen_21">
+        <shape>
+            <size android:height="@dimen/dimen_41" />
+            <solid android:color="@color/app_color_tertiaryVariant" />
+        </shape>
+    </item>
+    <item android:id="@android:id/progress" android:start="@dimen/dimen_21" android:end="@dimen/dimen_21">
+        <clip>
+            <shape>
+                <size android:height="@dimen/dimen_41" />
+                <solid android:color="@color/app_color_primary" />
+            </shape>
+        </clip>
+    </item>
+    <item android:id="@android:id/secondaryProgress" android:start="@dimen/dimen_21" android:end="@dimen/dimen_21">
+        <clip>
+            <shape>
+                <size android:height="@dimen/dimen_41" />
+                <corners android:radius="@dimen/dimen_21" />
+                <solid android:color="@color/app_color_primary" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>
